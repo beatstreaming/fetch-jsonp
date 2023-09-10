@@ -68,6 +68,9 @@ function fetchJsonp(_url, options = {}) {
     if (options.crossorigin) {
       jsonpScript.setAttribute('crossorigin', 'true');
     }
+
+    jsonpScript.setAttribute('type', "javascript");
+
     jsonpScript.id = scriptId;
     document.getElementsByTagName('head')[0].appendChild(jsonpScript);
 
